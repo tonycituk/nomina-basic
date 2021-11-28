@@ -1,6 +1,5 @@
 # nomina-basic
-[![star this repo](https://githubbadges.com/star.svg?user=tonycituk&repo=nomina-basic&style=default)](https://github.com/tonycituk/nomina-basic)
-[![fork this repo](https://githubbadges.com/fork.svg?user=tonycituk&repo=nomina-basic&style=default)](https://github.com/tonycituk/nomina-basic/fork)
+[![GitHub stars](https://badgen.net/github/stars/tonycituk/nomina-basic)](https://GitHub.com/tonycituk/nomina-basic/stargazers/)
 
 
 https://youtu.be/dJaAt_OnsJs
