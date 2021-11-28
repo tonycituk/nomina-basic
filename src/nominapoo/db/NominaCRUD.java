@@ -39,7 +39,7 @@ public class NominaCRUD {
 
     //Inserta en la tabla tableName a las columnas columns[] los valores values[]
     public int insertOne(String tableName, String columns[], String values[]) {
-        //"insert into student(Id,name,number) values('1','rachel','45')");
+        //"insert into student(Id,name,number) values(NULL,'rachel','45')");
         String queryString = "INSERT INTO " + tableName + "(";
         for (int i = 0; i < columns.length; i++) {
             queryString += columns[i];
@@ -57,7 +57,7 @@ public class NominaCRUD {
                 queryString += ");";
             }
         }
-        //System.out.println(queryString);
+        System.out.println(queryString);
         int result = 0;
         connector.connect();
         try {
@@ -72,7 +72,6 @@ public class NominaCRUD {
 
     //Elimina en la tabla tableName where the id is equal to the id
     public int deleteOne(String tableName, int id) {
-        //"insert into student(Id,name,number) values('1','rachel','45')");
         String queryString = "DELETE FROM " + tableName + " WHERE id=" + String.valueOf(id) + ";";
         //System.out.println(queryString);
         int result = 0;
@@ -92,7 +91,7 @@ public class NominaCRUD {
         //"insert into student(Id,name,number) values('1','rachel','45')");
         String queryString = "UPDATE " + tableName + " SET";
         //String sql = "update employee set name='Michael Sam' where emp_id=1";
-        
+
         for (int i = 0; i < columns.length; i++) {
             queryString += " " + columns[i] + "=" + values[i];
             if (i != columns.length - 1) {
@@ -102,7 +101,7 @@ public class NominaCRUD {
         queryString += " WHERE id=" + String.valueOf(id) + ";";
         //System.out.println(queryString);
         /*
-        */
+         */
         int result = 0;
         connector.connect();
         try {
@@ -116,12 +115,12 @@ public class NominaCRUD {
     }
 
     public static void main(String[] args) {
-        
+
         NominaCRUD crud = new NominaCRUD();
-        
+
         String[] columns = {"nombre", "numhoras"};
         String[] values = {"'lol'", "6"};
-        
-        crud.updateOne("admin", columns, values, 2);
+
+        crud.insertOne("admin", columns, values);
     }
 }
